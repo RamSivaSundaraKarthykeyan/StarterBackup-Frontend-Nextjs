@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
+@import "tailwindcss/preflight"
+
+
+@layer base {
+
+  *,
+  ::before,
+  ::after {
+    --tw-border-opacity: 1;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  }
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+    --foreground: #171717;
 }
 
 @theme inline {
@@ -10,17 +23,79 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-weborange: #fe4b01;
+  --color-webgray: #857D79;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
+    --background-image: url('/bgc.png');
   }
 }
 
 body {
-  background: var(--background);
+  background: var(--background-image), var(--background);
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tube beam */
+.bg-tube {
+  background: linear-gradient(to right,
+  #fe4b01,
+      #fe4b01,
+      #fe4b01);
+  height: 1px;
+  width: 40px;
+  /* tighten the beam */
+}
+
+/* Central glow */
+.glow-small {
+  background-color: #fe4b01;
+  opacity: 0.3;
+  /* a little stronger */
+  border-radius: 0px;
+  width: 50px;
+  /* make smaller */
+  height: 75px;
+  filter: blur(30px);
+  /* soft but contained */
+}
+
+
+/* Sharp Tube Light Beam */
+/* Sharp Tube Light */
+.beam-light {
+  width: 30px;
+  /* Width of the beam */
+  height: 1px;
+  /* Thin height */
+  background: #fe4b01;
+  filter: blur(0px);
+  /* Small blur for soft edges */
+  box-shadow: 0 0 8px #fe4b01,
+    /* Glow around the beam */
+    0 0 15px #fe4b01;
+}
+
+/* Spotlight that grows in width as it moves down */
+.spotlight-glow {
+  width: 40px;
+  /* Initial width */
+  height: 80px;
+  /* Initial height */
+  background: radial-gradient(ellipse at center,
+      rgba(254, 75, 1, 0.4) 0%,
+      transparent 70%);
+  filter: blur(6px);
+  /* Maintain soft edges */
+  position: absolute;
+  top: 60px;
+  /* Position below the tube light */
 }
