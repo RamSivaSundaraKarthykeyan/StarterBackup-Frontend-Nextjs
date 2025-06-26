@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Foot = () => {
   return (
-    <div className="bg-[#0f0b08] pt-30 relative z-0">
+    <div className="bg-[#0f0b08] pt-40 relative z-0">
       <div className="flex gap-20 justify-center items-center">
         <div>
           {" "}

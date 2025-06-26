@@ -18,7 +18,7 @@ export default function Home() {
         <StatsPanel />
         <NewsPanel />
         <div className="mt-20">
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center relative top-14">
             <EmailCard></EmailCard>
           </div>
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 const LearnMorePanel = () => {
   return (
     <div className="mt-50">
-      <div className="flex flex-wrap items-center justify-center gap-2 md:gap-2 bg-gray-50/5 px-4 md:px-5 py-2 rounded-lg border border-zinc-900 mb-8 w-[275px] mx-auto">
+      <div className="flex flex-wrap items-center justify-center gap-2 md:gap-2 bg-gray-50/5 px-4 md:px-5 py-2 rounded-lg border border-zinc-900 mb-8 sm:w-[275px] md:w-[275px] lg:w-[275px] mx-auto">
         <Image
           className=""
           src="/light.png"
