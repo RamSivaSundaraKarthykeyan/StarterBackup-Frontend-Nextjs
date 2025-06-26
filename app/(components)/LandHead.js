@@ -5,12 +5,12 @@ import Link from "next/link";
 const LandHead = () => {
   return (
     <div className="mt-40 md:mt-20">
-      <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 bg-gray-50/5 px-4 md:px-10 py-2 rounded-lg border border-zinc-900 mb-8 w-[400px] mx-auto">
+      <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 bg-gray-50/5 px-4 md:px-10 py-2 rounded-lg border border-zinc-900 mb-8 w-[375px] mx-auto">
         <Image
           className=""
           src="/bgr-logo.png"
-          width={20}
-          height={20}
+          width={15}
+          height={15}
           alt=""
         ></Image>
         <p className="text-center text-sm md:text-base">

@@ -20,7 +20,7 @@ export default function NavBar() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex justify-center gap-x-6 text-white text-sm font-medium">
+          <div className="flex justify-center gap-x-20 text-white text-sm font-medium">
             <Link href="/invest" className="hover:underline">
               Invest
             </Link>
